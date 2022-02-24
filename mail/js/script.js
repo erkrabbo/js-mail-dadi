@@ -1,13 +1,20 @@
-let userEmail = prompt('Digita la tua mail:');
+let inputMail = document.querySelector("form").email;
+let accedi = document.querySelector("form").accedi;
 
-users= ['asohaoh@gmail.com', 'asjfhaihiu@gmail.com', 'ciao@live.it', 'ciaociao@hotmail.it', 'hello@libero.it']
+const users= ['asohaoh@gmail.com', 'asjfhaihiu@gmail.com', 'ciao@live.it', 'ciaociao@hotmail.it', 'hello@libero.it']
 
-let registered = false;
+accedi.addEventListener('click', Log);
 
-for(i=0; i < users.length; i++){
-    if(users[i]==userEmail){
-        registered = true;
+function Log(e){
+    let registered = false;
+    
+    for(i=0; i < users.length; i++){
+        if(users[i]==inputMail.value){
+            registered = true;
+        }
     }
-}
+    
+    registered ? console.log('ci sei fra!') : console.log('non sei registrato');
 
-registered ? console.log('ci sei fra!') : console.log('non sei registrato');
+    e.preventDefault();
+}
