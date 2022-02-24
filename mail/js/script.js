@@ -8,11 +8,12 @@ const users= ['asohaoh@gmail.com', 'asjfhaihiu@gmail.com', 'ciao@live.it', 'ciao
 logForm.addEventListener("submit", log);
 
 function log(e){
-    let registered = false;
+    let registered = 0;
 
     for(i = 0; i < users.length; i++){        //confronto l'input con ogni valore del DB, se c'è una ricorrenza lo segno come registrato
         if(users[i] == inputMail.value){
             registered = true;
+            break;
         }
     }
 
