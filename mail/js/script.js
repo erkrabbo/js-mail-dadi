@@ -1,11 +1,11 @@
 let inputMail = document.querySelector("form").email;
-let accedi = document.querySelector("form").accedi;
+let logForm = document.querySelector("form");
 
 const users= ['asohaoh@gmail.com', 'asjfhaihiu@gmail.com', 'ciao@live.it', 'ciaociao@hotmail.it', 'hello@libero.it']
 
-accedi.addEventListener('click', Log);
+logForm.addEventListener("submit", log);
 
-function Log(e){
+function log(e){
     let registered = false;
     
     for(i=0; i < users.length; i++){
@@ -13,7 +13,7 @@ function Log(e){
             registered = true;
         }
     }
-    
+
     registered ? console.log('ci sei fra!') : console.log('non sei registrato');
 
     e.preventDefault();
