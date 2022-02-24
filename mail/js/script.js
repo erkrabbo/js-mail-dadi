@@ -10,7 +10,7 @@ logForm.addEventListener("submit", log);
 function log(e){
     let registered = 0;
 
-    for(i = 0; i < users.length; i++){        //confronto l'input con ogni valore del DB, se c'è una ricorrenza lo segno come registrato
+    for(i = 0; i < users.length; i++){        //confronto l'input con ogni valore del DB, se c'è una ricorrenza lo segno come registrato ed esco dal ciclo
         if(users[i] == inputMail.value){
             registered = true;
             break;
